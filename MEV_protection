@@ -1,0 +1,37 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract LotusFLR {
+    address public owner;
+    mapping(address => uint256) public stakes;
+
+    event TransactionValidated(bool isValid);
+    event ValidatorSlashed(address indexed validator, uint256 amount);
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function stake() external payable {
+        require(msg.value > 0, "Stake must be greater than zero");
+        stakes[msg.sender] += msg.value;
+    }
+
+    function validateTransaction(bytes32 txHash, bool isValid) external onlyOwner {
+        emit TransactionValidated(isValid);
+        if (!isValid) {
+            slashValidator(tx.origin);
+        }
+    }
+
+    function slashValidator(address validator) internal {
+        uint256 penalty = stakes[validator] / 2; // Slash 50% of stake
+        stakes[validator] -= penalty;
+        emit ValidatorSlashed(validator, penalty);
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only owner can call this function");
+        _;
+    }
+}

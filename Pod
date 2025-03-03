@@ -1,0 +1,83 @@
+public class MyClass {
+  public static void main(String[] args) {
+
+#include <iostream> 
+
+int main() 
+{ 
+ // User Interfaces 
+ std::cout << "Creating user interfaces with C++" << std::endl;  
+ 
+ // Algorithms 
+ std::cout << "Implementing algorithms with C++" << std::endl; 
+ 
+ // Databases 
+ std::cout << "Accessing and manipulating databases with C++" << std::endl;
+
+ 
+
+// File Input/Output 
+std::cout << "Reading and writing to files with C++" << std::endl; 
+ 
+// Networking 
+std::cout << "Network programming with C++" << std::endl; 
+ 
+// Games & Graphics 
+std::cout << "Developing games and graphics with C++" << std::endl; 
+ 
+// Working with Classes 
+std::
+
+public class MyClass {
+  public static void main(String[] args) { 
+
+// File Input/Output 
+std::cout << "Reading and writing to files with C++" << std::endl; 
+ 
+// Networking 
+std::cout << "Network programming with C++" << std::endl; 
+ 
+// Games & Graphics 
+std::cout << "Developing games and graphics with C++" << std::endl; 
+ 
+// Working with Classes 
+std::
+ 
+
+package main
+
+import (
+    "log"
+    "net/http"
+    "strconv"
+
+    "LotusFLR"
+)
+
+func main() {
+    http.HandleFunc("/generateNumber", generateNumber)
+    LotusFLR.InitializeProofOfReserve()
+    LotusFLR.InitializeNonFungibleTokens()
+
+    log.Fatal(http.ListenAndServe(":
+// Add additional route handlers here
+
+http.HandleFunc("/transferNFT", transferNFT)
+http.HandleFunc("/createNFT", createNFT)
+http.HandleFunc("/getAssetsDetails", getAssetsDetails)
+http.HandleFunc("/redeem", redeem)
+http.HandleFunc("/mint", mint)
+http.
+
+// Create the web3 instance
+let web3 = new Web3("http://localhost:8545");
+
+//Create the contract instance
+contractMyToken = new web3.eth.Contract( MyTokenABI, MyTokenAddress);
+
+//Function for token transfer 
+function transferToken(receiverAddress, amount){
+    contractMyToken.transact({
+        from: walletAddress,
+        to:
+
