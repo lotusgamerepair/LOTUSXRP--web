@@ -1,0 +1,63 @@
+LotusFLR /LotusFLR body { font-family: 'VT323', monospace; background-color: rgba(10, 10, 10, 1); } .loader { display: none; } .header { background-color: #1a202c; } .logo { width: 70px; height: 70px; margin-right: 10px; } .title { font-size: 36px; color: #fff; margin: 0; padding: 10px; display: flex; align-items: center; } .button { font-size: 14px; padding: 10px 20px; border-radius: 5px; text-transform: uppercase; cursor: pointer; margin-right: 10px; } .button-primary { background-color: #2f80ed; color: #fff; border: none; } .button-primary:hover { background-color: #1f6fcc; } .button-secondary { background-color: #fff; color: #1a202c; border: 2px solid #1a202c; } .button-secondary:hover { background-color: #1a202c; color: #fff; } @media screen and (max-width: 768px) { .title { font-size: 24px; } .logo { width: 50px; height: 50px; } .button { font-size: 12px; } } 
+
+￼ 
+
+LotusFLR
+
+Register Login / 
+
+LotusFLR
+
+Send 
+
+Basic Pro Premium 
+
+LOTUSFLR 
+
+//const web3 = new Web3(Web3.currentProvider);
+
+// Retrieve connected wallet address
+
+const accounts = await web3.eth.getAccounts();
+
+const walletAddress = accounts[0];
+
+// Fetch wallet balance
+
+const balance = await web3.eth.getBalance(walletAddress);
+
+console.log("Wallet Address:", walletAddress);
+
+console.log("Wallet Balance:", balance)// Function to scan the connected Web3 wallet
+
+function scanWallet() {
+
+  if (!window.ethereum) {
+
+    alert('Please install MetaMask or another compatible wallet to connect.');
+
+    return;
+
+  }
+
+  web3.eth.getAccounts(function (error, accounts) {
+
+    if (error) {
+
+      console.error('Error scanning wallet:', error);
+
+      return;
+
+    }
+
+    if (accounts.length === 0) {
+
+      alert('No connected wallet found.');
+
+      return;
+
+    }
+
+    const walletAddress = accounts[0];
+
+    const walletInfoElement{ // Process the subscription selection and initiate payment // You can use the PayPal API to handle the payment transaction // Replace with your PayPal Client ID paypal.Buttons({ createSubscription: function(data, actions) { return actions.subscription.create({ plan_id: planId }); }, onApprove: function(data, actions) { // Subscription created and approved console.log('Subscription created successfully'); }, onCancel: function(data) { // Subscription cancelled by the user console.log('Subscription cancelled'); }, onError: function(err) { // Error occurred during subscription creation console.error('Error creating subscription:', err); } }).render('#paypal-button-container'); } // Event listener for chat form submission document.getElementById('chat-form').addEventListener('submit', function(e) { e.preventDefault(); // Process the chat message and send it to the chatbot var message = e.target.elements.message.value; // Implement your chatbot logic here // Clear the input field e.target.elements.message.value = ''; }); // Event listener for subscription plan selection var subscriptionButtons = document.getElementsByClassName('subscription-btn'); for (var i = 0; i < subscriptionButtons.length; i++) { subscriptionButtons[i].addEventListener('click', function(e) { var planId = e.target.getAttribute('data-plan-id'); subscribe(planId); }); } 
