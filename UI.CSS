@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    font-family: 'VT323', monospace;
+    background: linear-gradient(135deg, #7C45FF 0%, #5C1EFF 100%);
+    color: #FFFFFF;
+}
+
+.loader {
+    display: none;
+    /* Add your custom loader styles here */
+}
+
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Add your custom title styles here */
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    outline: none;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #FF00FF;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    line-height: 1.5;
+    /* Add your custom result styles here */
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    /* Add your custom footer styles here */
+}

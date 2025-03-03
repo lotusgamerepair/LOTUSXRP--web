@@ -1,0 +1,3 @@
+# LOTUSFLRLotusFLR is a platform that helps law firms manage their administrative tasks, such as time tracking, billing, and document management. The app provides real-time insights into the status of tasks and allows for easy collaboration between teams.
+
+Enhancement suggestion: One enhancement could be the integration of artificial intelligence to automate certain administrative tasks and reduce the workload on lawyers and support staff. This could include auto-populating client information, automatically categorizing and organizing documents, and generating standard documents such as engagement letters and invoices
