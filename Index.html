@@ -1,222 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LotusFLR</title>
-    <!-- Include Tailwind CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <!-- Include Web3 library -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"
-      integrity="sha384-yIs/nprHPLixSNE5oU5xTzrsMfEgNfM0WbK7y46gd0ez7K7VR0zvmeAnir4k7r/x"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      /* Add custom styles */
-      body {
-        font-family: "VT323", monospace;
-        background: rgba(10, 10, 10, 1);
-      }
-
-      .loader {
-        display: none;
-      }
-
-      /* Style the input and button */
-      input[type="text"] {
-        border: none;
-        background-color: #121212;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-        box-sizing: border-box;
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
-
-      button[type="submit"] {
-        background-color: #f87171;
-        border: none;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-
-      /* Style the result box */
-      #result {
-        background-color: #202020;
-        color: white;
-        padding: 20px;
-        border-radius: 5px;
-        margin-top: 20px;
-        overflow-wrap: break-word;
-      }
-
-      /* Style the connect wallet button */
-      #wallet-connect {
-        background-color: #60a5fa;
-        border: none;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        width: 100%;
-        cursor: pointer;
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
-
-      /* Style the saved inputs and results list */
-      #saved-list {
-        background-color: #121212;
-        color: white;
-        padding: 20px;
-        border-radius: 5px;
-        margin-top: 20px;
-        overflow-wrap: break-word;
-      }
-
-      #saved-list ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #saved-list li {
-        margin-bottom: 10px;
-      }
-
-      #saved-list .saved-info {
-        font-weight: bold;
-      }
-
-      #saved-list .saved-result {
-        margin-top: 5px;
-      }
-
-      /* Style the footer */
-      footer {
-        margin-top: 20px;
-        color: #ccc;
-        font-size: 14px;
-      }
-
-      footer a {
-        color: #f87171;
-      }
-    </style>
-  </head>
-  <body class="text-white min-h-screen">
-    <div class="container mx-auto py-10 px-5">
-      <h1 class="text-5xl text-center mb-8">LotusFLR App</h1>
-      <form id="data-form" class="grid gap-4">
-        <input
-          type="text"
-          name="info"
-          placeholder="Enter information"
-          class="p-2 bg-gray-800 rounded"
-        />
-
-        <button
-          type="submit"
-          class="bg-red-600 p-2 text-center rounded uppercase tracking-widest"
-        >
-          Submit and Get AI Result
-        </button>
-      </form>
-      <button
-        id="wallet-connect"
-        class="bg-blue-600 p-2 mt-4 text-center rounded uppercase tracking-widest"
-      >
-        Connect Wallet
-      </button>
-      <div id="loader" class="loader w-16 h-16 mx-auto mt-4"></div>
-      <div id="result" class="mt-8 px-5 py-4 bg-gray-800 leading-relaxed rounded"></div>
-      <div id="saved-list" class="mt-8 px-5 py-4 leading-relaxed rounded">
-        <h2 class="text-2xl font-semibold mb-4">Saved Inputs and Results</h2>
-        <ul id="saved-items"></ul>
-      </div>
-      <footer class="mt-10 text-center">
-        <a href="#" class="text-red-700">LOTUSFLR</a>
-      </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LotusXRP Flare Network</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grid-background"></div>
+  <header>
+    <div class="logo-container">
+      <img src="lotus-logo.png" alt="LotusXRP Logo" class="logo">
+      <h1 class="neon-text">LotusXRP Flare Network</h1>
     </div>
-    <script>
-      document.getElementById("data-form").addEventListener("submit", async (e) => {
-        e.preventDefault();
+  </header>
 
-        const info = e.target.elements.info.value;
-        const prompt = `${info}`;
+  <nav class="vertical-nav">
+    <div class="light-beam" data-section="Home">Home</div>
+    <div class="light-beam" data-section="About">About</div>
+    <div class="light-beam" data-section="Services">Services</div>
+    <div class="light-beam" data-section="Contact">Contact</div>
+  </nav>
 
-        console.log(prompt);
+  <main>
+    <section id="home">
+      <h2 class="neon-text">Welcome to LotusXRP</h2>
+      <p>Innovating the future of blockchain technology.</p>
+    </section>
+    <section id="about">
+      <h2 class="neon-text">About Us</h2>
+      <p>We are a hybrid blockchain and telecom network focused on growth and innovation.</p>
+    </section>
+    <section id="services">
+      <h2 class="neon-text">Our Services</h2>
+      <p>Smart contracts, data solutions, and decentralized applications.</p>
+    </section>
+    <section id="contact">
+      <h2 class="neon-text">Contact Us</h2>
+      <p>Reach out to us for collaborations and inquiries.</p>
+    </section>
+  </main>
 
-        document.getElementById("loader").style.display = "block";
-        document.getElementById("result").innerHTML = "";
-
-        try {
-          const url = `https://a.picoapps.xyz/ask-ai?prompt=${encodeURIComponent(
-            prompt
-          )}`;
-          const res = await fetch(url);
-          const data = await res.json();
-
-          const formattedResponse = data.response.replace(/\n/g, "<br>");
-          document.getElementById("result").innerHTML = formattedResponse;
-
-          // Save the input and result
-          saveInputAndResult(info, formattedResponse);
-        } catch (error) {
-          console.error("Error:", error);
-          document.getElementById("result").innerHTML = "Error processing request";
-        } finally {
-          document.getElementById("loader").style.display = "none";
-        }
-      });
-
-      const web3 = new Web3(Web3.currentProvider || "http://localhost:8545");
-
-      document
-        .getElementById("wallet-connect")
-        .addEventListener("click", async () => {
-          if (!window.ethereum) {
-            alert(
-              "Please install MetaMask or another compatible wallet to connect."
-            );
-            return;
-          }
-
-          try {
-            await window.ethereum.request({ method: "eth_requestAccounts" });
-            console.log(
-              "Wallet connected:",
-              web3.utils.toChecksumAddress(window.ethereum.selectedAddress)
-            );
-          } catch (error) {
-            console.error("Unable to connect wallet:", error);
-          }
-        });
-
-      function saveInputAndResult(input, result) {
-        const savedItems = document.getElementById("saved-items");
-        const listItem = document.createElement("li");
-        const infoSpan = document.createElement("span");
-        const resultSpan = document.createElement("span");
-
-        infoSpan.className = "saved-info";
-        resultSpan.className = "saved-result";
-        infoSpan.innerText = input;
-        resultSpan.innerHTML = result;
-
-        listItem.appendChild(infoSpan);
-        listItem.appendChild(resultSpan);
-        savedItems.appendChild(listItem);
-      }
-    </script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
