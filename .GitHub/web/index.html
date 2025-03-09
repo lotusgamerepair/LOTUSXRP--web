@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LotusXRP Flare Network</title>
+  <style>
+    :root {
+      --neon-purple: #8a2be2;
+      --neon-pink: #ff00ff;
+      --grid-color: rgba(255,255,255,0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .grid-pattern {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 50px 50px;
+      z-index: -1;
+    }
+
+    .main-header {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .neon-logo {
+      width: 150px;
+      filter: drop-shadow(0 0 10px var(--neon-purple))
+              drop-shadow(0 0 20px var(--neon-pink));
+      animation: pulse 2s infinite;
+    }
+
+    .cyber-nav {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    .light-beam {
+      width: 10px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--neon-purple), var(--neon-pink));
+      margin: 1rem 0;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .light-beam:hover {
+      height: 70px;
+      background: linear-gradient(to bottom, var(--neon-pink), var(--neon-purple));
+      box-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-pink);
+    }
+
+    .page-section {
+      padding: 5rem 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .neon-heading {
+      font-size: 2.5rem;
+      text-shadow: 0 0 5px var(--neon-purple),
+                   0 0 15px var(--neon-pink);
+      margin-bottom: 1rem;
+    }
+
+    @keyframes pulse {
+      0% { filter: drop-shadow(0 0 10px var(--neon-purple)) 
+                   drop-shadow(0 0 20px var(--neon-pink)); }
+      50% { filter: drop-shadow(0 0 15px var(--neon-purple)) 
+                    drop-shadow(0 0 30px var(--neon-pink)); }
+      100% { filter: drop-shadow(0 0 10px var(--neon-purple)) 
+                     drop-shadow(0 0 20px var(--neon-pink)); }
+    }
+
+    @media (max-width: 768px) {
+      .cyber-nav {
+        display: none;
+      }
+      .neon-heading {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-pattern" aria-hidden="true"></div>
+
+  <header class="main-header">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJCSURBVHgB7dthTttAEIbhGQf1/V+0d0C4A0J7B1S9A0LvgNA7IPQOCHdA1Tug6h1Q7oDQO4A7IDh3kKQmbaQo8s4k8fuT1hKt8mQ9Hnts2zYAAAAAAGDf8kRj6w1m9kXSE0mDpL4/3kkaJX2X9C3G+HOtH6BkAMzss6QPkg6WPO1O0scY4+c1fI5iATD7KOmTpMMVX3In6X2M8ctKPk+ZANjscCvp5AFf8yPG+GoFn6tEAMz+7nD34K/5FWN8/sjPVmIR+E7LD3dJh5LevYDPtTMBZvaQHf5fh2b2+gV8tp0JMPv3Dj+QdCPp1h9vJV37fXf+2DxwVnhlZsdxHN9M0/RqmqanMcZ+HEdN06R5njXP8+3BwcG3vu+/9n3/pZTSATD7IumtP70Yx/FlSunUzE5ijCdJkpRSkqSU0sXh4eFlzvk8xnheSrmQ9LZ2CMz+7PBDkq6ur6+fpZQuJZ3lnE9TSv0wDEopKaWkvu/VdZ1yzur7XsMwqOu6s5zzpaRnKaUL//6qATD7vcMl6fr6+vppzvkq53yWcz4Zx1Fd1ynnrJyzUkpLryRJKaWbYRh0cnJylXO+yjm/zDlflQ7B1gCY/drhknRzc/NU0lXO+Wwcx5NhGNR13dLDXSSllJYQjOO4hODX1hBsDYDZrx0uSTc3N08kXeacT8dxPB6GYdnhDwlASmkJwTiOxx6Cy5Lh2BoAs987XJKWHT4Mw7LDHxMASSsJwdYAmP3e4ZKWHd51nVJKDw7AoxYCs+U7vJQH7fBSSim6ubn5vTUAZssD8L/s8FJK0e3t7d2uAEjLA7DTHX5f0zQV3d3d/dwVAEnKOd9bBO50h99XSh0kSdM0Fd3e3v7YFQBJ6rru3iJwpzv8vqZpKrq+vv6+KwCS1HXdvUXgTnf4faXUQdK0NQCSlHP+vQj8D3b4faXUQdK0NQCS1HXd70Xg/8AOf6hS6iBp2hoASco5/14E7jN2+EOVUgdJ09YASFLXdfcWgfuMHf5QpdRB0rQ1AJLUdd29ReA+Y4c/VCl1kDRtDYAk5ZzvLQL3GTv8oUqpAwAAAAAA8A/3A0mYgvT73w2JAAAAAElFTkSuQmCC" 
+         alt="LotusXRP Logo"
+         class="neon-logo">
+    <h1 class="neon-heading">LotusXRP Flare Network</h1>
+  </header>
+
+  <nav class="cyber-nav">
+    <div class="light-beam" data-section="Home"></div>
+    <div class="light-beam" data-section="About"></div>
+    <div class="light-beam" data-section="Services"></div>
+    <div class="light-beam" data-section="Contact"></div>
+  </nav>
+
+  <main>
+    <section id="home" class="page-section">
+      <h2 class="neon-heading">Welcome to the Future</h2>
+      <p>Blockchain innovation redefined</p>
+    </section>
+
+    <section id="about" class="page-section">
+      <h2 class="neon-heading">About Us</h2>
+      <p>Hybrid blockchain solutions</p>
+    </section>
+
+    <section id="services" class="page-section">
+      <h2 class="neon-heading">Our Services</h2>
+      <p>Smart contracts & data solutions</p>
+    </section>
+
+    <section id="contact" class="page-section">
+      <h2 class="neon-heading">Contact</h2>
+      <p>Connect with our team</p>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('.light-beam').forEach(beam => {
+      beam.addEventListener('click', () => {
+        const section = beam.dataset.section.toLowerCase();
+        document.getElementById(section).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    const logo = document.querySelector('.neon-logo');
+    setInterval(() => {
+      logo.style.filter = `drop-shadow(0 0 10px #8a2be2)
+                           drop-shadow(0 0 20px #ff00ff)`;
+      setTimeout(() => {
+        logo.style.filter = `drop-shadow(0 0 15px #8a2be2)
+                             drop-shadow(0 0 30px #ff00ff)`;
+      }, 500);
+    }, 1000);
+  </script>
+</body>
+</html>
